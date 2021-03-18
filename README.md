@@ -1,4 +1,4 @@
-## Capstone Engagement
+## Red vs Blue Capstone Engagement
 
 This document describes the successful penetration test of a Capstone webserver.
 
