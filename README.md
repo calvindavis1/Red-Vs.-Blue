@@ -36,7 +36,7 @@ ELK Machine
 Linux
 IPV4: 192.168.1.100
 
-![What is this] https://github.com/calvindavis1/Red-Vs.-Blue/blob/main/Images/Red/Capstone%20Network%20Topology.png
+(https://github.com/calvindavis1/Red-Vs.-Blue/blob/main/Images/Red/Capstone%20Network%20Topology.png)
 
 ## Reconnaissance
 
