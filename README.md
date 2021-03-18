@@ -12,7 +12,7 @@ Goals
 -Enable future access to the victim machine -Persistance. 
 
 
-Network Topology
+## Network Topology
 
 All machine's involved in the engagement were hosted in an Azure cloud environment Utilizing Hyper-V, ELK, and Kali Linux.
 This was a Grey Box penetration test as we had some information about the machine that we were attacking. The vicim machine had Metricbeat and Filebeat installed and was forwarding all logs to the ELK machine.
@@ -38,7 +38,7 @@ IPV4: 192.168.1.100
 
 https://github.com/calvindavis1/Red-Vs.-Blue/blob/main/Images/Red/Capstone%20Network%20Topology.png
 
-Reconnaissance
+## Reconnaissance
 
 Enumeration with NMAP
 Using the popular and effective tool NMAP, we were able to enumerate the topology of the environment. We were able to view the IP addresses of the machines on the network, and view the open ports. Our team noticed that the victim machine had both port 22 and 80 sitting open. This means that we would be able to access the machine using either an SSH connection, or by using HTTP.
@@ -48,6 +48,8 @@ https://github.com/calvindavis1/Red-Vs.-Blue/blob/main/Images/Red/NMAP.png
 Knowing that the IP address had port 80 open, we used a Chrome web browser to nagivate to view the web site that the IP was hosting- 
 
 http://192.168.1.105 
+
+## Exploitation
 
 Through manual enumeration, we were able to discover directories that should have been hidden. For example, "company_folders/secret_folder" as well as an informational note saying that the user "Ashton" had access to the folder.
 
@@ -60,6 +62,8 @@ https://github.com/calvindavis1/Red-Vs.-Blue/blob/main/Images/Red/Hydra.png
 In the secret folder we found information about how connect to the WebDAV server along with a hashed password of user "Ryan". We needed access to Ryan's account in order to access the WebDAV server so we used a free hashcracking tool found on the website https://crackstation.net. Within minutes we had access to Ryan's account, giving us access to the WebDAV server.
 
 https://github.com/calvindavis1/Red-Vs.-Blue/blob/main/Images/Red/WebDAV%20instructions.png
+
+## Persistance
 
 Using MSFVENOM we crafted a .php payload that would iniate a reverse shell back to our host machine, giving us full access to the web server. After accepting the reverse shell with a NetCat Listener, we had a shell on the server. After looking around for a few momments we were able to finish our engagement by finding the flag and exporting it to our host machine. 
 
