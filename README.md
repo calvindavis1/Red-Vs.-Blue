@@ -43,7 +43,7 @@ https://github.com/calvindavis1/Red-Vs.-Blue/blob/main/Images/Red/Capstone%20Net
 Enumeration with NMAP
 Using the popular and effective tool NMAP, we were able to enumerate the topology of the environment. We were able to view the IP addresses of the machines on the network, and view the open ports. Our team noticed that the victim machine had both port 22 and 80 sitting open. This means that we would be able to access the machine using either an SSH connection, or by using HTTP.
 
-https://github.com/calvindavis1/Red-Vs.-Blue/blob/main/Images/Red/NMAP.png
+![alt text]://github.com/calvindavis1/Red-Vs.-Blue/blob/main/Images/Red/NMAP.png
 
 Knowing that the IP address had port 80 open, we used a Chrome web browser to nagivate to view the web site that the IP was hosting- 
 
