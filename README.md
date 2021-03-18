@@ -1,2 +1,2 @@
-# Red-Vs.-Blue
-An attack and analysis of a root2boot.
+# Capstone Engagement
+A Red-team engagement and Blue Team analysis of a Captsone webserver.
